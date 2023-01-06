@@ -1,0 +1,203 @@
+/*button styling*/
+
+._coupon__list > div{
+    padding: 5px 10px;
+    display: inline-block;
+    vertical-align: top;
+    font-size:14px;
+    background:black;
+    height: auto;
+    color:white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    line-height:17px;
+    border-radius:3px;
+    cursor: pointer;
+    margin-right:10px;
+    /* position:absolute; */
+    right:10px;
+  }
+  
+  ._submit-overlay{
+    position:fixed;
+    width:220px;
+    height:200px;
+    top:50%;
+    left:50%;
+    margin-left: -110px;
+    margin-top: -120px;
+    background:white;
+    border:2px solid;
+    z-index: 9999999999999;
+    padding:10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  
+  ._coupon__list h1{
+    font-family: serif;
+    font-size:26px;
+    margin-bottom:20px;
+    border-bottom: 3px solid #eee;
+    padding-bottom:15px;
+    line-height: 26px;
+  }
+  ._coupon__list p{
+    font-family: sans-serif;
+    line-height:20px;
+    font-size:16px;
+    border-bottom: 3px solid #eee;
+    padding-bottom:15px;
+    text-align:center;
+    font-weight: 500;
+    color: #868585;
+    margin-top:0px;
+  }
+  ._coupon__list ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+  }
+  ._coupon__list ul li{
+    border-radius:3px;
+    border: 1px solid #e0e0e0;
+    padding:15px;
+    box-shadow: 0 3px 15px 0 rgba(0,0,0,0.25);
+    text-transform: uppercase;
+    margin-bottom:20px;
+  }
+  
+  ._coupon__list .code{
+    background: #ff8d00;
+    color:#fff;
+    padding:5px;
+    display: inline-block;
+    border-radius:3px;
+    border: 1px solid #eaeaea;
+    cursor:pointer;
+  }
+  ._coupon__list li p{
+    text-align:left;
+    margin-top:10px;
+    margin:0;
+    text-transform: none;
+    font-size:14px;
+  }
+  
+  ._coupon__list{
+    height:230px;
+    width:300px;
+    margin-top:10px;
+    border-radius:6px;
+    /* box-shadow: 0 3px 15px 0 rgba(0,0,0,0.25); */
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    border:1px solid white;
+    background:white;
+    cursor:pointer;
+    padding:15px;
+    /* position:fixed; */
+    top:90px;
+    right:5px;
+    z-index:9999999999;
+    overflow:hidden;
+    overflow-y: auto;
+  }
+  
+  /* ._coupon__button{
+    height:40px;
+    width:50px;
+   border-radius:6px;
+    border:1px solid #F59E0B;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    background: #F59E0B;
+    cursor:pointer;
+    font-family: serif;
+    color:whitesmoke;
+    top:15px;
+    right:15px;
+    text-align:center;
+    z-index:9999999999;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:17px;
+    font-weight:bold;
+    
+    
+  }
+
+  ._coupon__button:hover {
+    background-color: #D97706; 
+  } */
+
+
+._coupon__button {
+    margin-left: 15px;
+    padding: 0.2em 1em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+._coupon__button:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: _coupon__button 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    }
+
+    @keyframes _coupon__button {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+    }
+
+    ._coupon__button:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    }
+
+    
